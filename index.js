@@ -13,14 +13,18 @@ const path = require('path');
 const cheerio = require('cheerio');
 const fileToStream = require('./lib/io/file_to_stream');
 const tagRegex = require('./lib/detector/tag_regex');
+const tagCheerio = require('./lib/detector/tag_cheerio');
 
 /**
  * Module exports.
  */
 var resolvedPath = path.resolve('./', 'test.html');
 var stream = fileToStream(resolvedPath);
-var detector = new tagRegex('link','rel','stylesheet');
+var detector = new tagCheerio('a', '', '');
 detector.count(stream, console.log);
+
+// var detector = new tagRegex('meta','name','');
+// detector.count(stream, console.log);
 
 // s2s(stream,result=>{
 //     let tag = '<h1>';
