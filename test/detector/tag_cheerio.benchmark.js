@@ -9,27 +9,27 @@
 /**
  * Dependencies.
  */
-const path = require('path');
-const fileToStream = require('../../lib/io/file_to_stream');
-const tagCheerio = require('../../lib/detector/tag_cheerio');
+const path = require('path')
+const fileToStream = require('../../lib/io/file_to_stream')
+const TagCheerio = require('../../lib/detector/tag_cheerio')
 
-let testerArray = [];
+let testerArray = []
 for (var i = 0; i < 10; i++) {
-    testerArray.push(`test${i}.html`);
+  testerArray.push(`test${i}.html`)
 }
 
-let ruleArray = [];
-ruleArray.push(new tagCheerio('link', 'rel', 'dns-prefetch'));
-ruleArray.push(new tagCheerio('meta', 'name', ''));
-ruleArray.push(new tagCheerio('h1', '', ''));
-ruleArray.push(new tagCheerio('strong', '', ''));
-ruleArray.push(new tagCheerio('a', '', ''));
+let ruleArray = []
+ruleArray.push(new TagCheerio('link', 'rel', 'dns-prefetch'))
+ruleArray.push(new TagCheerio('meta', 'name', ''))
+ruleArray.push(new TagCheerio('h1', '', ''))
+ruleArray.push(new TagCheerio('strong', '', ''))
+ruleArray.push(new TagCheerio('a', '', ''))
 
 testerArray.forEach(tester => {
-    let resolvedPath = path.resolve('./test/detector', tester);
-    ruleArray.forEach(rule => {
-        console.time(`Test ${tester} for ${rule.ruleName}`);
-        var stream = fileToStream(resolvedPath);
-        rule.count(stream, _ => console.timeEnd(`Test ${tester} for ${rule.ruleName}`));
-    });
-});
+  let resolvedPath = path.resolve('./test/detector', tester)
+  ruleArray.forEach(rule => {
+    console.time(`Test ${tester} for ${rule.ruleName}`)
+    var stream = fileToStream(resolvedPath)
+    rule.count(stream, () => console.timeEnd(`Test ${tester} for ${rule.ruleName}`))
+  })
+})
