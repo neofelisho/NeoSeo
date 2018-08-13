@@ -9,22 +9,34 @@
 /**
  * Module dependencies.
  */
-const configs = require('./config/default')
-// const fileToStream = require('./lib/io/file_to_stream')
-// const streamToString = require('./lib/io/stream_to_string')
-const SeoRule = require('./lib/seo_rule')
+const Detector = require('./lib/detector')
 const fs = require('fs')
 
 /**
  * Module exports.
  */
-var data = fs.readFileSync('./test.html').toString()
+let data = fs.readFileSync('./test.html').toString()
 
-configs.forEach(config => {
-  var rule = new SeoRule(config)
-  rule.loadData(data)
-  let msg = rule.getMessage()
-  if (msg != null && msg !== '') {
-    console.log(msg)
+let customConfigs = [
+  {
+    'root': '',
+    'tag': 'link',
+    'attributeName': 'rel',
+    'attributeValue': '',
+    'attributeType': 'with',
+    'limit': 0,
+    'determinType': 'more',
+    'isEnable': true
   }
-})
+]
+
+let detector = new Detector(customConfigs)
+let results = detector.getResult(data)
+// configs.forEach(config => {
+//   let rule = new SeoRule(config)
+//   let result = rule.getResult(data)
+//   if (result != null && result !== '') {
+//     results.push(result)
+//   }
+// })
+results.forEach(result => { console.log(result) })
