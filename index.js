@@ -15,7 +15,9 @@ const fs = require('fs')
 /**
  * Module exports.
  */
-let data = fs.readFileSync('./test.html').toString()
+let path = './test.html'
+// let data = fs.readFileSync(path).toString()
+let data = fs.createReadStream(path, { encoding: 'utf8' })
 
 let customConfigs = [
   {
@@ -24,19 +26,11 @@ let customConfigs = [
     'attributeName': 'rel',
     'attributeValue': '',
     'attributeType': 'with',
-    'limit': 0,
-    'determinType': 'more',
-    'isEnable': true
+    'minimum': 0,
+    'maximum': null
   }
 ]
 
 let detector = new Detector(customConfigs)
 let results = detector.getResult(data)
-// configs.forEach(config => {
-//   let rule = new SeoRule(config)
-//   let result = rule.getResult(data)
-//   if (result != null && result !== '') {
-//     results.push(result)
-//   }
-// })
 results.forEach(result => { console.log(result) })

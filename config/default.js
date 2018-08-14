@@ -19,9 +19,8 @@ module.exports = [
     'attributeName': 'alt',
     'attributeValue': '',
     'attributeType': 'without',
-    'limit': 0,
-    'determinType': 'more',
-    'isEnable': true
+    'minimum': 0,
+    'maximum': null
   },
   {
     'root': '',
@@ -29,9 +28,8 @@ module.exports = [
     'attributeName': 'rel',
     'attributeValue': '',
     'attributeType': 'without',
-    'limit': 0,
-    'determinType': 'more',
-    'isEnable': true
+    'minimum': 0,
+    'maximum': null
   },
   {
     'root': 'head',
@@ -39,9 +37,8 @@ module.exports = [
     'attributeName': '',
     'attributeValue': '',
     'attributeType': 'with',
-    'limit': 1,
-    'determinType': 'less',
-    'isEnable': true
+    'minimum': null,
+    'maximum': 1
   },
   {
     'root': 'head',
@@ -49,9 +46,8 @@ module.exports = [
     'attributeName': 'name',
     'attributeValue': 'descriptions',
     'attributeType': 'with',
-    'limit': 1,
-    'determinType': 'less',
-    'isEnable': true
+    'minimum': null,
+    'maximum': 1
   },
   {
     'root': 'head',
@@ -59,9 +55,8 @@ module.exports = [
     'attributeName': 'name',
     'attributeValue': 'keywords',
     'attributeType': 'with',
-    'limit': 1,
-    'determinType': 'less',
-    'isEnable': true
+    'minimum': null,
+    'maximum': 1
   },
   {
     'root': '',
@@ -69,9 +64,8 @@ module.exports = [
     'attributeName': '',
     'attributeValue': '',
     'attributeType': 'with',
-    'limit': 15,
-    'determinType': 'more',
-    'isEnable': true
+    'minimum': 15,
+    'maximum': null
   },
   {
     'root': '',
@@ -79,7 +73,6 @@ module.exports = [
     'attributeName': '',
     'attributeValue': '',
     'attributeType': 'with',
-    'limit': 1,
-    'determinType': 'more',
-    'isEnable': true
+    'minimum': 1,
+    'maximum': null
   }]
