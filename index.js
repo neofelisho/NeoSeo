@@ -15,7 +15,7 @@ const fs = require('fs')
 /**
  * Module exports.
  */
-let path = './test.html'
+let path = './test/detector/test5.html'
 // let data = fs.readFileSync(path).toString()
 let data = fs.createReadStream(path, { encoding: 'utf8' })
 
