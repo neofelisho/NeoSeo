@@ -10,10 +10,6 @@
  * Module dependencies.
  */
 const Detector = require('./lib/detector')
-const fs = require('fs')
-// const cheerio = require('cheerio')
-const streamToString = require('./lib/io/stream_to_string')
-const stringToStream = require('./lib/io/string_to_stream')
 
 /**
  * Module exports.
@@ -35,11 +31,13 @@ let detector = new Detector(customConfigs)
 // detector.getResult(stream).then
 // detector.getResult(stream, console.log)
 
-let path = './test/detector/test5.html'
-// let url = 'https://neofelisho.github.io/2018/08/2018-08-05-nodejs-getting-started/'
+// let path = './test/detector/test5.html'
+
+let url = 'https://stackoverflow.com/questions/34628305/using-promises-with-fs-readfile-in-a-loop'
+
 // let data = fs.readFileSync(path).toString()
-let stream = fs.createReadStream(path, { encoding: 'utf8' })
-detector.getResult(stream, process.stdout, (err, result) => {
+// let stream = fs.createReadStream(path, { encoding: 'utf8' })
+detector.getResult(url, process.stdout, (err, result) => {
   if (err) {
     console.log(err)
   } else {
