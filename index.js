@@ -10,6 +10,7 @@
  * Module dependencies.
  */
 const Detector = require('./lib/detector')
+const fs = require('fs')
 
 /**
  * Module exports.
@@ -31,19 +32,22 @@ let detector = new Detector(customConfigs)
 // detector.getResult(stream).then
 // detector.getResult(stream, console.log)
 
-// let path = './test/detector/test5.html'
-
-let url = 'https://stackoverflow.com/questions/34628305/using-promises-with-fs-readfile-in-a-loop'
+let input = './test/detector/test8.html'
+// let output = fs.createReadStream('output.txt', { encoding: 'utf8' })
+// let output = console.log
+// let output = fs.createWriteStream('output.txt')
+let output = process.stdout
+// let output = 'output.txt'
+// let url = 'httaps://stackoverflow.com/questions/34628305/using-promises-with-fs-readfile-in-a-loop'
 
 // let data = fs.readFileSync(path).toString()
 // let stream = fs.createReadStream(path, { encoding: 'utf8' })
-detector.getResult(url, process.stdout, (err, result) => {
-  if (err) {
-    console.log(err)
-  } else {
-    console.log(result)
-  }
-})
+detector.getResult(input, output, console.log)
+// detector.getResult(input, output, (err) => {
+//   if (err) {
+//     console.log(err)
+//   }
+// })
 
 // let p1 = streamToString(stream)
 // let p2 = p1.then(stringToStream)
