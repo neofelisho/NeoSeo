@@ -14,6 +14,7 @@
   "author": "Neo Ho",
   "license": "ISC",
   "dependencies": {
+    "chai-as-promised": "^7.1.1",
     "cheerio": "^1.0.0-rc.2"
   },
   "devDependencies": {

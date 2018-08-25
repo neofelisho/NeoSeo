@@ -25,7 +25,7 @@ let customConfigs = [
   }
 ]
 
-let detector = new Detector(customConfigs, [0, 1, 2, 3, 4, 5, 6])
+let detector = new Detector(customConfigs)
 let input = './test/detector/test5.html'
 let output = process.stdout
 detector.getResult(input, output, console.log)
