@@ -1,9 +1,10 @@
 {
-  "name": "readfile",
+  "name": "neo-seo",
   "version": "1.0.0",
-  "description": "An exercise of reading file",
+  "description": "SEO detector with default 7 rules, and user can add custom rule or disable default rule.",
   "main": "index.js",
   "directories": {
+    "config": "config",
     "lib": "lib",
     "test": "test"
   },
@@ -13,9 +14,7 @@
   "author": "Neo Ho",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "highland": "^2.13.0",
-    "stream-to-string": "^1.1.0"
+    "cheerio": "^1.0.0-rc.2"
   },
   "devDependencies": {
     "chai": "^4.1.2",

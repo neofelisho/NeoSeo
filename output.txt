@@ -1,6 +1,0 @@
-There are 60 <img> without attribute alt in this HTML, more than 0.
-There are 297 <a> without attribute rel in this HTML, more than 0.
-There are 0 <meta> with attribute name="descriptions" in <head>, less than 1.
-There are 0 <meta> with attribute name="keywords" in <head>, less than 1.
-There are 2 <h1> in this HTML, more than 1.
-There are 19 <link> with attribute rel in this HTML, more than 0.
