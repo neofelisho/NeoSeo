@@ -37,8 +37,8 @@ describe('Test for array to stream', () => {
     })
   })
   it('Test null object', () => {
-    let expected = null
-    arrayToStream(expected).then(() => {})
+    arrayToStream()
+      .then(() => {})
       .catch(err => {
         expect(err).to.be.instanceOf(Error)
         expect(err).to.have.property('message', 'Parameter `array` should be an `Array`')
