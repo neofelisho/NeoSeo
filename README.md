@@ -76,11 +76,11 @@ $ npm install neo-seo
     ```
   * Use a URL
     ```js
-    var input = 'http://some-url.to.run.seo/
+    var input = 'http://some-url.to.run.seo/'
     ```
     or
     ```js
-    var input = 'https://https-url.to.run.seo/
+    var input = 'https://https-url.to.run.seo/'
     ```
 
 ### Output
@@ -146,6 +146,7 @@ $ npm install neo-seo
   let disabledList = [1, 2, 3]
   ```
   ```js
+  // disable the rule by rule name.
   let disabledList = ['No <title> tag in <haed>', '<img /> tag without alt attribute']
   ```
 ## Tests
