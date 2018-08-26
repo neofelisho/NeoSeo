@@ -138,6 +138,16 @@ $ npm install neo-seo
       }
       ```
 
+### Disabled List
+
+  * Use an array to list which default rule(s) should be disabled.
+  ```js
+  // disable the rule number 1, 2, 3 in default rules.
+  let disabledList = [1, 2, 3]
+  ```
+  ```js
+  let disabledList = ['No <title> tag in <haed>', '<img /> tag without alt attribute']
+  ```
 ## Tests
 
 ```bash
