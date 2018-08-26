@@ -1,6 +1,6 @@
 # NeoSeo
 
-SEO detector for [node](http://nodejs.org).
+SEO defects detector for [node.js](http://nodejs.org).
 
 ```js
 var NeoSeo = require('neo-seo')
