@@ -1,12 +1,11 @@
 const chai = require('chai')
 const os = require('os')
-const fs = require('fs')
-const Detector = require('../lib/detector')
+const NeoSeo = require('../lib/neo_seo')
 const fileToString = require('../lib/io/file_to_string')
 
 var expect = chai.expect
 
-let detector = new Detector()
+let detector = new NeoSeo()
 let inputFile = './test/testdata.html'
 let outputFile = './test/output_file.txt'
 let expected = [
