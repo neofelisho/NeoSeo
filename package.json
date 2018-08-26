@@ -1,6 +1,6 @@
 {
   "name": "neo-seo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SEO detector with default 7 rules, and user can add custom rule or disable default rule.",
   "main": "./lib/neo_seo.js",
   "directories": {
