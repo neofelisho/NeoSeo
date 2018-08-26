@@ -12,17 +12,17 @@ describe('Test for array to stream', () => {
       streamToString(stream, data => {
         let actual = data.split(os.EOL)
         actual = actual.filter(a => a !== '')
-        expect(actual).to.be.eql(actual)
+        expect(actual).to.be.eql(expected)
       })
     })
   })
-  it('Test number array', () => {
+  it('Test int array', () => {
     let expected = [1, 3, 5, 7, 999]
     arrayToStream(expected).then(stream => {
       streamToString(stream, data => {
         let actual = data.split(os.EOL)
-        actual = actual.filter(a => a !== '')
-        expect(actual).to.be.eql(actual)
+        actual = actual.filter(a => a !== '').map(value => parseInt(value))
+        expect(actual).to.be.eql(expected)
       })
     })
   })
@@ -32,7 +32,7 @@ describe('Test for array to stream', () => {
       streamToString(stream, data => {
         let actual = data.split(os.EOL)
         actual = actual.filter(a => a !== '')
-        expect(actual).to.be.eql(actual)
+        expect(actual).to.be.eql(expected)
       })
     })
   })
