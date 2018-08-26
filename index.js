@@ -26,6 +26,6 @@ let customConfigs = [
 ]
 
 let detector = new Detector(customConfigs)
-let input = './test/detector/test5.html'
+let input = './test/detector/test0.html'
 let output = process.stdout
 detector.getResult(input, output, console.log)

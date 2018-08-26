@@ -9,10 +9,10 @@ chai.use(chaiAsPromised)
 var expect = chai.expect
 
 describe('Test for file to string', () => {
-  var expected = 'Hello world!'
-  var testFileUtf8 = './test_for_file_to_string_utf8.txt'
-  var testFileBig5 = './test_for_file_to_string_big5.txt'
-  var testFileAscii = './test_for_file_to_string_Ascii.txt'
+  let expected = 'Hello world!'
+  let testFileUtf8 = './test_for_file_to_string_utf8.txt'
+  let testFileBig5 = './test_for_file_to_string_big5.txt'
+  let testFileAscii = './test_for_file_to_string_Ascii.txt'
   before(() => {
     let utf8Stream = new stream.PassThrough()
     let writeUtf8Stream = fs.createWriteStream(testFileUtf8, 'utf8')
